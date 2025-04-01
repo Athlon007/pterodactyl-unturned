@@ -4,8 +4,8 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2020-11-30T03:21:40-05:00",
-    "name": "Unturned-DS",
-    "author": "service@hcgcloud.com",
+    "name": "Unturned-Athlon",
+    "author": "konrad.figura@icloud.com",
     "description": "Unturned dedicated server with Rocketmod.",
     "features": null,
     "image": "hcgcloud\/pterodactyl-unturned:latest",
@@ -95,6 +95,24 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:20"
+        },
+        {
+            "name": "Steam Web API Key",
+            "description": "Your Steam Web API Key",
+            "env_variable": "STEAM_WEBAPI_KEY",
+            "default_value": "key",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:80"
+        },
+        {
+            "name": "Unturned Map Config Path",
+            "description": "Path to your severs Config.json",
+            "env_variable": "UNTURNED_CONFIG_JSON_PATH",
+            "default_value": "/home/container/Servers/unturned/Config.json",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string"
         }
     ]
 }
